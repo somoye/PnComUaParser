@@ -1,0 +1,24 @@
+{
+    "name": "pmcomuaparser",
+    "version": "1.0.0",
+    "description": "lets parse",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/somoye/PnComUaParser.git"
+    },
+    "author": "Lika",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/somoye/PnComUaParser/issues"
+    },
+    "homepage": "https://github.com/somoye/PnComUaParser#readme",
+    "dependencies": {
+        "cheerio": "^0.22.0",
+        "request": "^2.79.0"
+    }
+}

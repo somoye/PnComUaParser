@@ -5,9 +5,21 @@ const request = require("request"),
 request(url, function (error, response, body) {
     if (!error) {
         var $ = cheerio.load(body),
-            notebook = $(".catalog-block-head").html();
+            articleItem = $("article.item");
 
-        console.log("Вот оно " + notebook);
+
+        var newArr = articleItem.get().map(function (item) {
+            return {
+                "name": $(item).find(".catalog-block-head a").text(),
+                "price": $(item).find(".price span strong").text()
+            };
+
+
+        })
+
+        console.log(JSON.stringify(newArr));
+        //
+        //        console.log("Вот он " + notebook + "Вот цена " + price);
     } else {
         console.log("Fatal error");
     }
